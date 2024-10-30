@@ -1,12 +1,13 @@
 // public/contact.js
 
+
+
 // Fetch credentials from the server
 fetch('/config')
   .then(response => response.json())
   .then(config => {
     // Initialize EmailJS with the fetched user ID
     emailjs.init(config.userID);
-
     document.getElementById('contact-form').addEventListener('submit', function(event) {
       event.preventDefault();
 
